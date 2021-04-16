@@ -299,6 +299,26 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
+      <x>462</x>
+      <y>322</y>
+      <w>259</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Shout
+--
++ moment: Date{NotNull, Temporal(TIMESTAMP), Past}
++ author: String {NotBlank, Length(min = 5, max = 25)}
++ text: String {NotBlank, Length(min = 0, max = 100)}
++ info: String {URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  
+ </panel_attributes>
+    <additional_attributes/>
+<element>
+    <id>UMLClass</id>
+    <coordinates>
       <x>595</x>
       <y>385</y>
       <w>217</w>
@@ -308,7 +328,7 @@ has v</panel_attributes>
 Task
 --
 + title: String {NotBlank, Length(1, 80)}
-+ initialMoment: Date {NotNull, TimeStamp}
++ initialMoment: Date {NotNull, Temporal(TimeStamp)}
 + finalMoment: Date {NotNull, Temporal(TimeStamp)}
 + workload: Double {NotNull}
 + description: String {NotBlank, Length(1, 500)}
