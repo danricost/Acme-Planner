@@ -10,13 +10,14 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 
+import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Task {
+public class Task extends DomainEntity{
 	
 	// Serialisation identifier -----------------------------------------------
 
@@ -44,7 +45,7 @@ public class Task {
 	protected String 			description;
 	
 	@NotNull
-	protected boolean 			isPublic;
+	protected Boolean 			isPublic;
 	
 	// Derived attributes -----------------------------------------------------
 	

@@ -309,7 +309,7 @@ Task
 --
 + title: String {NotBlank, Length(1, 80)}
 + initialMoment: Date {NotNull, TimeStamp}
-+ finalMoment: Date {NotNull, TimeStamp}
++ finalMoment: Date {NotNull, Temporal(TimeStamp)}
 + workload: Double {NotNull}
 + description: String {NotBlank, Length(1, 500)}
 + isPublic: boolean {NotNull}
