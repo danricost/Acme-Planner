@@ -46,28 +46,63 @@
 		<property name="author" value="Leslie Design-Testing"/>
 		<property name="text" value="Woa! This app's so cool!"/>
 		<property name="moment" value="2021/02/13 12:30"/>
-		<property name="info" value="http://www.sample-app.com"/>		
+		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
 
 	<!--  Tasks -->
 	
 	<bean id="task01" class="acme.entities.tasks.Task">
-		<property name="title" value="Tarea de ejemplo pública"/>
+		<property name="title" value="Tarea 1: tarea pública finalizada"/>
 		<property name="initialMoment" value="2021/02/20 11:02"/>
 		<property name="finalMoment" value="2021/02/22 21:37"/>
 		<property name="workload" value="13.5"/>
-		<property name="description" value="Esto es un ejemplo de una tarea pública"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública finalizada"/>
 		<property name="isPublic" value="True"/>
 	</bean>
 	
 	<bean id="task02" class="acme.entities.tasks.Task">
-		<property name="title" value="Tarea de ejemplo privada"/>
+		<property name="title" value="Tarea 2: tarea privada finalizada"/>
 		<property name="initialMoment" value="2021/02/18 12:02"/>
 		<property name="finalMoment" value="2021/02/24 20:37"/>
 		<property name="workload" value="20.4"/>
-		<property name="description" value="Esto es un ejemplo de una tarea privada"/>
+		<property name="description" value="Esto es un ejemplo de una tarea privada finalizada"/>
 		<property name="isPublic" value="False"/>
-
+	</bean>
+	
+	<bean id="task03" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 3: tarea pública no finalizada"/>
+		<property name="initialMoment" value="2023/02/20 11:02"/>
+		<property name="finalMoment" value="2023/02/22 21:37"/>
+		<property name="workload" value="15.0"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública no finalizada"/>
+		<property name="isPublic" value="True"/>
+	</bean>
+	
+	<bean id="task04" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 4: tarea privada no finalizada"/>
+		<property name="initialMoment" value="2023/03/20 11:02"/>
+		<property name="finalMoment" value="2023/03/22 21:37"/>
+		<property name="workload" value="12.1"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública no finalizada"/>
+		<property name="isPublic" value="False"/>
+	</bean>
+	
+	<bean id="task05" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 5: tarea pública no finalizada"/>
+		<property name="initialMoment" value="2023/06/20 11:02"/>
+		<property name="finalMoment" value="2023/06/22 21:37"/>
+		<property name="workload" value="12.7"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública no finalizada"/>
+		<property name="isPublic" value="True"/>
+	</bean>
+	
+	<bean id="task06" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 6: tarea privada no finalizada"/>
+		<property name="initialMoment" value="2023/07/20 11:02"/>
+		<property name="finalMoment" value="2023/07/22 21:37"/>
+		<property name="workload" value="13.4"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública no finalizada"/>
+		<property name="isPublic" value="False"/>
 	</bean>
 
 </beans>
