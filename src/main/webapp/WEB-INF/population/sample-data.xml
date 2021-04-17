@@ -46,7 +46,8 @@
 		<property name="author" value="Leslie Design-Testing"/>
 		<property name="text" value="Woa! This app's so cool!"/>
 		<property name="moment" value="2021/02/13 12:30"/>
-		<property name="info" value="http://www.sample-app.com"/>
+		<property name="info" value="http://www.sample-app.com"/>		
+	</bean>
 
 	<!--  Tasks -->
 	
