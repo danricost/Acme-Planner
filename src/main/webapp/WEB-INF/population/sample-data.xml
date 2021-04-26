@@ -132,5 +132,86 @@
 		<property name="description" value="Esto es un ejemplo de una tarea pública no finalizada"/>
 		<property name="isPublic" value="False"/>
 	</bean>
+	
+	<bean id="task07" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 7: tarea pública no finalizada"/>
+		<property name="initialMoment" value="2023/04/20 11:02"/>
+		<property name="finalMoment" value="2023/04/22 21:37"/>
+		<property name="workload" value="15.2"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública no finalizada"/>
+		<property name="isPublic" value="True"/>
+	</bean>
+	
+	<bean id="task08" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 8: tarea pública no finalizada"/>
+		<property name="initialMoment" value="2023/05/20 11:02"/>
+		<property name="finalMoment" value="2023/05/22 21:37"/>
+		<property name="workload" value="13.7"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública no finalizada"/>
+		<property name="isPublic" value="True"/>
+	</bean>
+	
+	<bean id="task09" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 9: tarea pública no finalizada"/>
+		<property name="initialMoment" value="2023/01/20 11:02"/>
+		<property name="finalMoment" value="2023/01/22 21:37"/>
+		<property name="workload" value="13.4"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública no finalizada"/>
+		<property name="isPublic" value="True"/>
+	</bean>
+	
+	<bean id="task10" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 10: tarea pública no finalizada"/>
+		<property name="initialMoment" value="2023/11/20 11:02"/>
+		<property name="finalMoment" value="2023/11/22 21:37"/>
+		<property name="workload" value="14.5"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública no finalizada"/>
+		<property name="isPublic" value="True"/>
+	</bean>
+	
+	<bean id="task11" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 11: tarea pública finalizada"/>
+		<property name="initialMoment" value="2021/01/20 11:02"/>
+		<property name="finalMoment" value="2021/01/22 21:37"/>
+		<property name="workload" value="15.1"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública finalizada"/>
+		<property name="isPublic" value="True"/>
+	</bean>
+	
+	<bean id="task12" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 12: tarea pública finalizada"/>
+		<property name="initialMoment" value="2020/02/20 11:02"/>
+		<property name="finalMoment" value="2020/02/22 21:37"/>
+		<property name="workload" value="11.9"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública finalizada"/>
+		<property name="isPublic" value="True"/>
+	</bean>
+	
+	<bean id="task13" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 13: tarea pública finalizada"/>
+		<property name="initialMoment" value="2020/05/20 11:02"/>
+		<property name="finalMoment" value="2020/05/22 21:37"/>
+		<property name="workload" value="14.8"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública finalizada"/>
+		<property name="isPublic" value="True"/>
+	</bean>
+	
+	<bean id="task14" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 14: tarea pública finalizada"/>
+		<property name="initialMoment" value="2020/06/20 11:02"/>
+		<property name="finalMoment" value="2020/06/22 21:37"/>
+		<property name="workload" value="13.3"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública finalizada"/>
+		<property name="isPublic" value="True"/>
+	</bean>
+	
+	<bean id="task15" class="acme.entities.tasks.Task">
+		<property name="title" value="Tarea 15: tarea pública finalizada"/>
+		<property name="initialMoment" value="2020/07/20 11:02"/>
+		<property name="finalMoment" value="2020/07/22 21:37"/>
+		<property name="workload" value="12.5"/>
+		<property name="description" value="Esto es un ejemplo de una tarea pública finalizada"/>
+		<property name="isPublic" value="True"/>
+	</bean>
 
 </beans>
