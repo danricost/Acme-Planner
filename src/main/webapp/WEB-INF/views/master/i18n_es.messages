@@ -37,11 +37,19 @@ master.menu.anonymous.tasks = Tareas
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
+master.menu.administrator.task=Listar tareas
 master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shutdown = Parar el sistema
+
+
+# master.menu.authenticated ########################################################
+master.menu.authenticated= Authenticated
+master.menu.authenticated.task=Listar tareas
+
+
 
 # master.menu.provider ########################################################
 
