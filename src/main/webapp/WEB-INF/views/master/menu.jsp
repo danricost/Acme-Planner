@@ -20,21 +20,31 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.list-shouts" action="/anonymous/shout/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.create-shout" action="/anonymous/shout/create"/>
 			<acme:menu-suboption code="master.menu.anonymous.tasks" action="/anonymous/task/list"/>
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
+		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">			
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/master/populate-initial"/>
 			<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/master/populate-sample"/>			
-			<acme:menu-separator/>
+			<acme:menu-separator/>			
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
+		</acme:menu-option>					
+
+
+		<acme:menu-option code="master.menu.authenticated" access="hasRole('Authenticated')">
+			<acme:menu-suboption code="master.menu.authenticated.task" action="/authenticated/task/list"/>
 		</acme:menu-option>
 
+
+
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
+			<acme:menu-suboption code="master.menu.administrator.task" action="/authenticated/task/list"/>
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 
