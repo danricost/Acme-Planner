@@ -111,7 +111,7 @@
 		<property name="initialMoment" value="2023/03/20 11:02"/>
 		<property name="finalMoment" value="2023/03/22 21:37"/>
 		<property name="workload" value="12.1"/>
-		<property name="description" value="Esto es un ejemplo de una tarea pública no finalizada"/>
+		<property name="description" value="Esto es un ejemplo de una tarea privada no finalizada"/>
 		<property name="isPublic" value="False"/>
 	</bean>
 	
@@ -129,7 +129,7 @@
 		<property name="initialMoment" value="2023/07/20 11:02"/>
 		<property name="finalMoment" value="2023/07/22 21:37"/>
 		<property name="workload" value="13.4"/>
-		<property name="description" value="Esto es un ejemplo de una tarea pública no finalizada"/>
+		<property name="description" value="Esto es un ejemplo de una tarea privada no finalizada"/>
 		<property name="isPublic" value="False"/>
 	</bean>
 	
