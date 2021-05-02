@@ -3,8 +3,9 @@ package acme.entities.customization;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.NotEmpty;
+import javax.persistence.OneToMany;
 
+import acme.entities.spamWord.SpamWord;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,13 +20,14 @@ import lombok.Setter;
 		protected static final long	serialVersionUID	= 1L;
 
 		// Attributes -------------------------------------------------------------		
-		protected List<String>			palabrasSpam;
-
-		@NotEmpty		
-		protected Double			tolerancia;
+		
+		protected Double					tolerancia;
 				
 		// Derived attributes -----------------------------------------------------
 
 		// Relationships ----------------------------------------------------------
+		
+		@OneToMany
+		protected List<SpamWord>			palabrasSpam;
 
 	}

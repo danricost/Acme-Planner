@@ -103,6 +103,7 @@
 	
 	
 	
+	
 		<!-- SpamWord -->
 		
 		
@@ -156,8 +157,25 @@
 		<!-- Customization -->
 		
 		
-	<bean name="spamWord01" class="acme.entities.spamWord.SpamWord">
-		<property name="userAccount" ref="authenticatedUserAccount" />
+	<bean name="customization01" class="acme.entities.customization.Customization">
+	
+		<property name="tolerancia" value="10.0" />
+		<property name="palabrasSpam">
+			<list>
+				<ref bean="spamWord01"/>
+				<ref bean="spamWord02"/>
+				<ref bean="spamWord03"/>
+				<ref bean="spamWord04"/>
+				<ref bean="spamWord05"/>
+				<ref bean="spamWord06"/>
+				<ref bean="spamWord07"/>
+				<ref bean="spamWord08"/>
+				<ref bean="spamWord09"/>
+				<ref bean="spamWord10"/>
+				<ref bean="spamWord11"/>
+			</list>
+		</property>
+		
 	</bean>
 		
 		
