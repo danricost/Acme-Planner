@@ -103,4 +103,82 @@
 	
 	
 	
+	
+		<!-- SpamWord -->
+		
+		
+	<bean name="spamWord01" class="acme.entities.spamWord.SpamWord">
+		<property name="palabraSpam" value="sex" />
+	</bean>
+	
+	<bean name="spamWord02" class="acme.entities.spamWord.SpamWord">
+		<property name="palabraSpam" value="sexo" />
+	</bean>
+	
+	<bean name="spamWord03" class="acme.entities.spamWord.SpamWord">
+		<property name="palabraSpam" value="hard core" />
+	</bean>
+	
+	<bean name="spamWord04" class="acme.entities.spamWord.SpamWord">
+		<property name="palabraSpam" value="explícito" />
+	</bean>
+	
+	<bean name="spamWord05" class="acme.entities.spamWord.SpamWord">
+		<property name="palabraSpam" value="viagra" />
+	</bean>
+	
+	<bean name="spamWord06" class="acme.entities.spamWord.SpamWord">
+		<property name="palabraSpam" value="cialis" />
+	</bean>
+	
+	<bean name="spamWord07" class="acme.entities.spamWord.SpamWord">
+		<property name="palabraSpam" value="nigeria" />
+	</bean>
+	
+	<bean name="spamWord08" class="acme.entities.spamWord.SpamWord">
+		<property name="palabraSpam" value="you've won" />
+	</bean>
+	
+	<bean name="spamWord09" class="acme.entities.spamWord.SpamWord">
+		<property name="palabraSpam" value="has ganado" />
+	</bean>
+	
+	<bean name="spamWord10" class="acme.entities.spamWord.SpamWord">
+		<property name="palabraSpam" value="million dollar" />
+	</bean>
+	
+	<bean name="spamWord11" class="acme.entities.spamWord.SpamWord">
+		<property name="palabraSpam" value="millón de dolares" />
+	</bean>
+
+
+		
+		
+		<!-- Customization -->
+		
+		
+	<bean name="customization01" class="acme.entities.customization.Customization">
+	
+		<property name="tolerancia" value="10.0" />
+		<property name="palabrasSpam">
+			<list>
+				<ref bean="spamWord01"/>
+				<ref bean="spamWord02"/>
+				<ref bean="spamWord03"/>
+				<ref bean="spamWord04"/>
+				<ref bean="spamWord05"/>
+				<ref bean="spamWord06"/>
+				<ref bean="spamWord07"/>
+				<ref bean="spamWord08"/>
+				<ref bean="spamWord09"/>
+				<ref bean="spamWord10"/>
+				<ref bean="spamWord11"/>
+			</list>
+		</property>
+		
+	</bean>
+		
+		
+	
+	
 </beans>

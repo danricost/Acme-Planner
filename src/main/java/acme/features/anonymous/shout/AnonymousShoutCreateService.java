@@ -82,7 +82,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-
+		
 	}
 
 	@Override
