@@ -51,10 +51,7 @@ master.menu.authenticated= Authenticated
 master.menu.authenticated.task=List tasks
 
 
-# master.menu.manager ########################################################
-master.menu.manager= Manager
-master.menu.manager.task= List my tasks
-master.menu.manager.create-task = Create Task
+
 
 
 # master.menu.provider ########################################################
