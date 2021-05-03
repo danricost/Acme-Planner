@@ -50,7 +50,10 @@ master.menu.administrator.dashboard = Panel de control
 master.menu.authenticated= Autenticado
 master.menu.authenticated.task=Listar tareas
 
-
+# master.menu.manager ########################################################
+master.menu.manager= Manager
+master.menu.manager.task= Listar mis tareas
+master.menu.manager.create-task = Crear Tarea
 
 # master.menu.provider ########################################################
 
