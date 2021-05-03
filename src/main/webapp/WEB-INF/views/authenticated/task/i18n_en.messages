@@ -9,7 +9,7 @@
 # they accept any liabilities with respect to them.
 
 
-authenticated.task.list.label.title= Tittle
+authenticated.task.list.label.title= Title
 authenticated.task.list.label.initialMoment=Beginnig
 authenticated.task.list.label.finalMoment= End
 authenticated.task.list.label.workload= Workload

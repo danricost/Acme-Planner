@@ -13,11 +13,14 @@
 package acme.features.anonymous.shout;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.customization.Customization;
 import acme.entities.shouts.Shout;
+import acme.entities.spamWord.SpamWord;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -77,11 +80,54 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		return result;
 	}
 
+	public static  boolean esSpam(final List<SpamWord> palabrasSpam, final String texto, final Double tolerancia) {
+		boolean boleano=false;
+		
+		int npalabrasspam=0;
+		
+		int palabrasCompuestas=0;
+		for(int i=0; i<palabrasSpam.size(); i++) {
+			
+			if(texto.contains(palabrasSpam.get(i).getPalabraSpam())){
+				
+				
+				
+				final String[] pru=texto.concat(".").split(palabrasSpam.get(i).getPalabraSpam());
+				
+				npalabrasspam+= pru.length-1;
+				
+				if(palabrasSpam.get(i).getPalabraSpam().split(" ").length>=2) {
+					palabrasCompuestas+= (palabrasSpam.get(i).getPalabraSpam().split(" ").length-1) *  (pru.length-1);
+				}
+			}
+		}
+		
+		final String[] grito= texto.replace(".", "").replace(",", "").split(" ");	
+		
+		final double porcentaje= ((double)npalabrasspam/(double)(grito.length-palabrasCompuestas))*100.;
+		
+		if(porcentaje >=tolerancia) {
+			
+			boleano=true;
+		}
+		
+		
+		return boleano;
+	}
+
+	
 	@Override
 	public void validate(final Request<Shout> request, final Shout entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		final List<Customization> repo= this.repository.findCustomization();
+			
+		if(AnonymousShoutCreateService.esSpam(repo.get(0).getPalabrasSpam(), entity.getText(), repo.get(0).getTolerancia())) {
+			
+			errors.state(request, false, "text", "anonymous.shout.create.error.label.text");
+		}
 		
 	}
 
