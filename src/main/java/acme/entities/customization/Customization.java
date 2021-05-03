@@ -30,4 +30,10 @@ import lombok.Setter;
 		@OneToMany
 		protected List<SpamWord>			palabrasSpam;
 
-	}
+	
+
+
+
+	
+		
+}

@@ -48,7 +48,7 @@ master.menu.administrator.dashboard = Dashboard
 
 # master.menu.authenticated ########################################################
 master.menu.authenticated= Authenticated
-master.menu.authenticated.task=Listar tareas
+master.menu.authenticated.task=List tasks
 
 
 # master.menu.manager ########################################################
