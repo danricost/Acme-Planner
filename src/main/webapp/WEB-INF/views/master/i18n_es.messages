@@ -50,7 +50,10 @@ master.menu.administrator.dashboard = Panel de control
 master.menu.authenticated= Autenticado
 master.menu.authenticated.task=Listar tareas
 
-
+# master.menu.manager ########################################################
+master.menu.manager= Manager
+master.menu.manager.task= Listar mis tareas
+master.menu.manager.create-task = Crear Tarea
 
 # master.menu.provider ########################################################
 
@@ -70,6 +73,7 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.become-manager = Hazte manager
 
 ﻿# master.footer ###############################################################
 

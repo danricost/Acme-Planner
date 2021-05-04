@@ -46,10 +46,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, //
-			"totalNumberPublicTask", "totalNumberPrivateTask", // 
-			"totalNumberFinishedTask", "totalNumberNonFinishedTask", "averageTaskWorkload",
-			"minTaskWorkload", "maxTaskWorkload", "averageTaskExecutionPeriods",
-			"minTaskExecutionPeriods", "maxTaskExecutionPeriods");
+			"totalNumberPublicTask", "totalNumberPrivateTask", "totalNumberFinishedTask", "totalNumberNonFinishedTask", 
+			"averageTaskWorkload", "minTaskWorkload", "maxTaskWorkload", "deviationTaskWorkload",
+			"averageTaskExecutionPeriods", "minTaskExecutionPeriods", "maxTaskExecutionPeriods", "deviationTaskExecutionPeriods");
 	}
 
 	@Override
@@ -64,9 +63,11 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double averageTaskWorkload;
 		Double minTaskWorkload;
 		Double maxTaskWorkload;
+		Double deviationTaskWorkload;
 		Double averageTaskExecutionPeriods;
 		Double minTaskExecutionPeriods;
 		Double maxTaskExecutionPeriods;
+		Double deviationTaskExecutionPeriods;
 
 		totalNumberPublicTask = this.repository.findManyPublic();
 		totalNumberPrivateTask = this.repository.findManyPrivate();
@@ -75,9 +76,11 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		averageTaskWorkload = this.repository.findAverageTaskWorkload();
 		minTaskWorkload = this.repository.findMinTaskWorkload();
 		maxTaskWorkload = this.repository.findMaxTaskWorkload();
+		deviationTaskWorkload = this.repository.findDeviationTaskWorkload();
 		averageTaskExecutionPeriods = this.repository.findAverageTaskExecutionPeriods();
 		minTaskExecutionPeriods = this.repository.findMinTaskExecutionPeriods();
 		maxTaskExecutionPeriods = this.repository.findMaxTaskExecutionPeriods();
+		deviationTaskExecutionPeriods = this.repository.findDeviationTaskExecutionPeriods();
 
 		result = new Dashboard();
 		result.setTotalNumberPublicTask(totalNumberPublicTask);
@@ -87,9 +90,11 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setAverageTaskWorkload(averageTaskWorkload);
 		result.setMaxTaskWorkload(maxTaskWorkload);
 		result.setMinTaskWorkload(minTaskWorkload);
+		result.setDeviationTaskWorkload(deviationTaskWorkload);
 		result.setAverageTaskExecutionPeriods(averageTaskExecutionPeriods);
 		result.setMinTaskExecutionPeriods(minTaskExecutionPeriods);
 		result.setMaxTaskExecutionPeriods(maxTaskExecutionPeriods);
+		result.setDeviationTaskExecutionPeriods(deviationTaskExecutionPeriods);
 		
 
 

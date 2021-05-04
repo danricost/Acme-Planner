@@ -76,6 +76,14 @@
 			<acme:print value="${minTaskWorkload}"/>
 		</td>
 	</tr>
+		<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.deviationTaskWorkload"/>
+		</th>
+		<td>
+			<acme:print value="${deviationTaskWorkload}"/>
+		</td>
+	</tr>
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.averageTaskExecutionPeriods"/>
@@ -100,7 +108,14 @@
 			<acme:print value="${minTaskExecutionPeriods}"/>
 		</td>
 	</tr>	
-
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.deviationTaskExecutionPeriods"/>
+		</th>
+		<td>
+			<acme:print value="${deviationTaskExecutionPeriods}"/>
+		</td>
+	</tr>	
 
 	
 </table>
