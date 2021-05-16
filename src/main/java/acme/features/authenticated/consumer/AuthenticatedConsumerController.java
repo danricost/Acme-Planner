@@ -34,8 +34,7 @@ public class AuthenticatedConsumerController extends AbstractController<Authenti
 
 	@Autowired
 	protected AuthenticatedConsumerUpdateService	updateService;
-	
-	
+
 	// Constructors -----------------------------------------------------------
 
 
