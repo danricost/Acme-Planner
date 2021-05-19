@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.StarterProjectTest;
+import acme.testing.AcmePlannerTest;
 
-public class AnonymousTaskListTest extends StarterProjectTest{
+public class AnonymousTaskListTest extends AcmePlannerTest{
 	
 	// Lifecycle management ---------------------------------------------------
 	
