@@ -22,7 +22,6 @@ public class DashboardTest extends AcmePlannerTest {
 		final String deviationTaskExecutionPeriods) {		
 		
 		super.signIn("administrator","administrator");
-		
 		this.navigateHome();
 		super.clickOnMenu("Administrator", "Dashboard");
 		assert super.getCurrentUrl().equals("/administrator/dashboard/show");

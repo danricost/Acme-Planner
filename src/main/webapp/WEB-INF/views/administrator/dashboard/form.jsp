@@ -19,6 +19,7 @@
 	<acme:message code="administrator.dashboard.title"/>
 </h2>
 
+
 <table class="table table-sm" id="dashboard">	
 	<tr>
 		<th scope="row">
