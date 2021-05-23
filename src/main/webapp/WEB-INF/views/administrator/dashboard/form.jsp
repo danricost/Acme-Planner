@@ -19,7 +19,8 @@
 	<acme:message code="administrator.dashboard.title"/>
 </h2>
 
-<table class="table table-sm">	
+
+<table class="table table-sm" id="dashboard">	
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.totalNumberPublicTask"/>
@@ -119,4 +120,3 @@
 
 	
 </table>
-

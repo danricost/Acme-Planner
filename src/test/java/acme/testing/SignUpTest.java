@@ -31,6 +31,7 @@ public class SignUpTest extends AcmePlannerTest {
 		super.signOut();
 	}
 
+	
 	// Ancillary methods ------------------------------------------------------
 	
 }
