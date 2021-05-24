@@ -6,7 +6,7 @@ import org.springframework.core.annotation.Order;
 
 import acme.testing.AcmePlannerTest;
 
-public class ListTest extends AcmePlannerTest {
+public class AuthenticatedTaskListTest extends AcmePlannerTest {
 	
 	@ParameterizedTest
 	@CsvFileSource(resources= "/authenticated.task/positive.csv", encoding= "utf-8", numLinesToSkip = 1)
