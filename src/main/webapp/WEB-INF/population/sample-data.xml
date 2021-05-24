@@ -213,5 +213,63 @@
 		<property name="description" value="Esto es un ejemplo de una tarea pública finalizada"/>
 		<property name="isPublic" value="True"/>
 	</bean>
+	
+	
+	
+	<!-- Managers -->
+	
+	<bean name="manager2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="manager2"/>
+		<property name="password" value="manager2"/>
+		<property name="enabled" value="true"/>	
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Manager"/>
+				<property name="surname" value="Two"/>
+				<property name="email" value="manager2@mail.com"/>
+			</bean>
+		</property>	
+		<property name="roles">
+			<list>
+				<ref bean="manager2Manager"/>
+				<ref bean="manager2Authenticated"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean name="manager2Manager" class="acme.entities.roles.Manager">
+		<property name="userAccount" ref="manager2UserAccount"/>
+	</bean>
+
+	<bean name="manager2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="manager2UserAccount"/>
+	</bean>
+	
+	<bean name="manager3UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="manager3"/>
+		<property name="password" value="manager3"/>
+		<property name="enabled" value="true"/>	
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Manager"/>
+				<property name="surname" value="Three"/>
+				<property name="email" value="manager3@mail.com"/>
+			</bean>
+		</property>	
+		<property name="roles">
+			<list>
+				<ref bean="manager3Manager"/>
+				<ref bean="manager3Authenticated"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean name="manager3Manager" class="acme.entities.roles.Manager">
+		<property name="userAccount" ref="manager3UserAccount"/>
+	</bean>
+
+	<bean name="manager3Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="manager3UserAccount"/>
+	</bean>
 
 </beans>

@@ -34,6 +34,12 @@
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
+			<acme:menu-separator/>	
+			<acme:menu-separator/>			
+			<acme:menu-suboption code="master.menu.administrator.threshold" action="/administrator/customization/list"/>
+			<acme:menu-separator/>		
+			<acme:menu-suboption code="master.menu.administrator.spamwords" action="/administrator/spamword/list"/>
+			<acme:menu-separator/>
 		</acme:menu-option>					
 
 
@@ -41,10 +47,10 @@
 			<acme:menu-suboption code="master.menu.authenticated.task" action="/authenticated/task/list"/>
 		</acme:menu-option>
 
-		<%-- <acme:menu-option code="master.menu.manager" access="hasRole('Manager')">
+		<acme:menu-option code="master.menu.manager" access="hasRole('Manager')">
 			<acme:menu-suboption code="master.menu.manager.task" action="/manager/task/list-mine"/>
 			<acme:menu-suboption code="master.menu.manager.create-task" action="/manager/task/create"/>
-		</acme:menu-option> --%>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.administrator.task" action="/authenticated/task/list"/>

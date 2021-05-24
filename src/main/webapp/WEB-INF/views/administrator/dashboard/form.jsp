@@ -19,7 +19,6 @@
 	<acme:message code="administrator.dashboard.title"/>
 </h2>
 
-
 <table class="table table-sm" id="dashboard">	
 	<tr>
 		<th scope="row">
@@ -77,7 +76,7 @@
 			<acme:print value="${minTaskWorkload}"/>
 		</td>
 	</tr>
-		<tr>
+	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.deviationTaskWorkload"/>
 		</th>
@@ -116,7 +115,8 @@
 		<td>
 			<acme:print value="${deviationTaskExecutionPeriods}"/>
 		</td>
-	</tr>	
+	</tr>
 
 	
 </table>
+
