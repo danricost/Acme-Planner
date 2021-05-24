@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
 
 import acme.entities.spamWord.SpamWord;
 import acme.framework.entities.DomainEntity;
@@ -21,6 +22,7 @@ import lombok.Setter;
 
 		// Attributes -------------------------------------------------------------		
 		
+		@NotNull
 		protected Double					tolerancia;
 				
 		// Derived attributes -----------------------------------------------------

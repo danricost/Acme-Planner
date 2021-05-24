@@ -23,7 +23,7 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 		super.clickOnSubmitButton("Shout!");
 
 		super.clickOnMenu("Anonymous", "List shouts");
-		super.checkColumnHasValue(recordIndex, 0, moment);
+
 		super.checkColumnHasValue(recordIndex, 1, author);
 		super.checkColumnHasValue(recordIndex, 2, text);
 		super.checkColumnHasValue(recordIndex, 3, info);
@@ -32,7 +32,7 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(20)
 	public void createNegative(final int recordIndex, final String moment, final String author, final String text, final String info) {		
 
 		super.clickOnMenu("Anonymous", "Shout!");
