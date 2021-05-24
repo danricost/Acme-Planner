@@ -12,6 +12,15 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 	
 	// Test cases -------------------------------------------------------------
 	
+	
+	
+	/*
+	 * Características "acme.features.anonymous.task.AnonymuosTaskListService" y
+	 * "acme.features.anonymous.task.AnonymuosTaskShowService"
+	 * 
+	 * Se comprueba que coincida cada elemento con el esperado de la lista de tareas.
+	 * Debido a que todas la entradas de la lista coinciden con las del fichero csv, no se producirá ningún error.
+	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
