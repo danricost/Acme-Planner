@@ -33,7 +33,8 @@ public class AnonymousTaskShowService implements AbstractShowService<Anonymous, 
 		
 		id = request.getModel().getInteger("id");
 		result = this.repository.findById(id);
-		if(!result.getIsPublic() || !result.getFinalMoment().after(Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant())))
+		final boolean b = !result.getIsPublic();
+		if(Boolean.TRUE.equals(b) || !result.getFinalMoment().after(Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant())))
 			sol = false;
 
 		return sol;

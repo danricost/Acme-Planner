@@ -8,6 +8,18 @@ import acme.testing.AcmePlannerTest;
 
 public class AuthenticatedTaskListTest extends AcmePlannerTest {
 	
+	// Test cases -------------------------------------------------------------
+	
+	
+	
+	/*
+	 * Características "acme.features.authenticated.task.AuthenticatedTaskListService" y
+	 * "acme.features.authenticated.task.AuthenticatedTaskShowService"
+	 * 
+	 * Se comprueba que coincida cada elemento con el esperado de la lista de tareas.
+	 * Debido a que todas la entradas de la lista coinciden con las del fichero csv, no se producirá ningún error.
+	 */
+	
 	@ParameterizedTest
 	@CsvFileSource(resources= "/authenticated.task/positive.csv", encoding= "utf-8", numLinesToSkip = 1)
 	@Order(10)

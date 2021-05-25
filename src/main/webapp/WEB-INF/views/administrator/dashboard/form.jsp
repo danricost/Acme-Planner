@@ -20,6 +20,7 @@
 </h2>
 
 <table class="table table-sm" id="dashboard">	
+<caption>Este es el dashboard de administrator</caption>
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.totalNumberPublicTask"/>
