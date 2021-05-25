@@ -20,4 +20,4 @@ anonymous.shout.list.label.text = Texto
 anonymous.shout.list.label.info = Información adicional
 
 
-anonymous.shout.create.error.label.text=Más del 10% de palabras Spam
+anonymous.shout.create.error.label.text= Umbral de palabras spam superado

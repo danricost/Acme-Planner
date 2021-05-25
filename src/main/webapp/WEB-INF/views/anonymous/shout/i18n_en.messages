@@ -20,4 +20,4 @@ anonymous.shout.list.label.text = Text
 anonymous.shout.list.label.info = Additional info
 
 
-anonymous.shout.create.error.label.text= More than 10% spamWords
+anonymous.shout.create.error.label.text= Spam word threshold exceeded
