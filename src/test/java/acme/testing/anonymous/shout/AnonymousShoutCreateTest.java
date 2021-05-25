@@ -10,6 +10,15 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 	
 	// Test cases -------------------------------------------------------------
 
+	/*
+	 * Característica "acme.features.anonymous.shout.AnonymousShoutCreateService"
+	 * 
+	 * Este test se encarga de comprobar que el servicio Create de la entidad Shout funcione correctamente,
+	 * entrando en el formulario de creación y rellenando los distintos campos con los datos pasados por el csv.
+	 * Después comprobamos que se han creado correctamente yendo a la vista del listado de Shouts y comprobando cada 
+	 * columna con su valor esperado.
+	 */
+	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
@@ -29,6 +38,14 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 		super.checkColumnHasValue(recordIndex, 3, info);
 
 	}
+	
+	/*
+	 * Característica "acme.features.anonymous.shout.AnonymousShoutCreateService"
+	 * 
+	 * Este test se encarga de comprobar que el servicio Create de la entidad Shout capture correctamente los fallos,
+	 * entrando en el formulario de creación y rellenando los distintos campos con los datos pasados por el csv.
+	 * Estos campos se rellenarán de forma errónea, comprobando los distintos fallos que nuestra aplicación debe capturar.
+	 */
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
