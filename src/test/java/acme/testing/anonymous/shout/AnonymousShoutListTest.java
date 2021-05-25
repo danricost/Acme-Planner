@@ -9,6 +9,13 @@ import acme.testing.AcmePlannerTest;
 public class AnonymousShoutListTest extends AcmePlannerTest{
 
 	// Test cases -------------------------------------------------------------
+	
+	/*
+	 * Característica "acme.features.anonymous.shout.AnonymousShoutListService"
+	 * 
+	 * Este test se encarga de comprobar que el servicio List de la entidad Shout funcione correctamente,
+	 * comprobando que cada columna del listado coincida con los datos pasados por el archivo csv.
+	 */
 
 		@ParameterizedTest
 		@CsvFileSource(resources = "/anonymous/shout/list.csv", encoding = "utf-8", numLinesToSkip = 1)
