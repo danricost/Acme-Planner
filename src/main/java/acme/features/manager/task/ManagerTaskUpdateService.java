@@ -58,12 +58,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		result = manager.getUserAccount().getId() == principal.getAccountId();
 		
 		
-		boolean segundocaso;
-		final Date fecha=(Date) request.getModel().getAttribute("finalMoment");
 		
-		segundocaso= fecha.after(Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()));
-
-		result= result&&segundocaso;
 		return result;
 	}
 	@Override
@@ -80,9 +75,20 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 			
 		
 		
+		boolean fechaPermitidaModificar;
+		final Date fecha= entity.getFinalMoment();
+		
+		fechaPermitidaModificar= fecha.after(Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()));
+
+		if(fechaPermitidaModificar) {
+			errors.state(request, false, "initialMoment", "manager.task.create.error.label.initialMomentUpdate");
+		}
+		
+		
+		
 		if(ManagerTaskCreateService.esSpam(repo.get(0).getPalabrasSpam(), res, repo.get(0).getTolerancia())) {
 			
-			errors.state(request, false, "description", "anonymous.shout.create.error.label.text");
+			errors.state(request, false, "description", "manager.task.create.error.label.description");
 		}
 		
 		if (!errors.hasErrors("finalMoment")) {
@@ -108,6 +114,9 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		if(entity.getFinalMoment().before(Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()))) {
 			errors.state(request, false , "finalMoment", "manager.task.create.error.label.finalMoment");
 		}
+		
+		
+		
 		
 	}
 
