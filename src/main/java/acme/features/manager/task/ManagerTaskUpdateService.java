@@ -54,8 +54,16 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		task = this.repository.findOneTaskById(taskId);
 		manager = task.getManager();
 		principal = request.getPrincipal();
+		
 		result = manager.getUserAccount().getId() == principal.getAccountId();
+		
+		
+		boolean segundocaso;
+		final Date fecha=(Date) request.getModel().getAttribute("finalMoment");
+		
+		segundocaso= fecha.after(Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()));
 
+		result= result&&segundocaso;
 		return result;
 	}
 	@Override
