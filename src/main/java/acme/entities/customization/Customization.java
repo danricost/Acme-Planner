@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Range;
+
 import acme.entities.spamWord.SpamWord;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -23,6 +25,7 @@ import lombok.Setter;
 		// Attributes -------------------------------------------------------------		
 		
 		@NotNull
+		@Range(min = 0, max = 100)
 		protected Double					tolerancia;
 				
 		// Derived attributes -----------------------------------------------------
