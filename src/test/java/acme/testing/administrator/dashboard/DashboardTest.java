@@ -1,6 +1,7 @@
 package acme.testing.administrator.dashboard;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
@@ -14,6 +15,9 @@ public class DashboardTest extends AcmePlannerTest {
 	
 	// Test cases -------------------------------------------------------------
 	
+	//Comprobamos que funcione correctamente el dashboard. Para ello accedemos como administrador y vamos al dashboard. Con el metodo locateOne(Byx.path()) 
+	//conseguimos los valores del dashboard, accediendo a ellos a traves de las etiquetas del jsp (Table->Tr[1, 2, 3, ...]->Td, etiqueta donde se encuentra
+	//el valor de la categoria del dashboard, y comprobamos que esos valores sean los esperados
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/dashboard/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
@@ -43,7 +47,13 @@ public class DashboardTest extends AcmePlannerTest {
 		super.signOut();
 	}
 	
-	// Ancillary methods ------------------------------------------------------
+	//dashboardNegativo:Comprobamos que no funcione el Dashboard bajo ciertas condiciones. Para ello intentamos acceder a el sin loggear.
+	
+	@Test
+	public void dashboardNegativo() {
+		super.navigate("/administrator/dashboard/show", null);
+		super.checkErrorsExist();
+	}
 
 }
 
